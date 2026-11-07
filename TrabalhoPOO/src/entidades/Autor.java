@@ -22,10 +22,10 @@ public class Autor {
         return nome;
     }
 
-
     public String getNacionalidade() {
         return nacionalidade;
     }
 
 
 }
+
