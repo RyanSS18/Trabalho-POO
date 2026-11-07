@@ -4,17 +4,14 @@ public class Livro extends Item {
 
     private Autor autor;
 
-    public Livro(Integer id, String titulo, Integer ano, Autor autor) {
+   public Livro(Integer id, String titulo, Integer ano,
+                 String nomeAutor, String nacionalidadeAutor) {
         super(id, titulo, ano);
-        this.autor = autor;
+        this.autor = new Autor(nomeAutor, nacionalidadeAutor);
     }
 
     public Autor getAutor() {
         return autor;
-    }
-
-    public void setAutor(Autor autor) {
-        this.autor = autor;
     }
 
     @Override
