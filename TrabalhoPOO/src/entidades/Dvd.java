@@ -1,5 +1,11 @@
 package entidades;
 
+/**
+ * Representa um DVD do acervo.
+ * HERDA de Item (id, título, ano) e acrescenta a duração do filme.
+ */
+
+
 public class Dvd extends Item {
 
     private Integer duracaoMinutos;
@@ -12,7 +18,7 @@ public class Dvd extends Item {
     public Integer getDuracaoMinutos() {
         return duracaoMinutos;
     }
-
+    //Implementação do método abstrato de Item
     @Override
     public Double calcularMultaPorDia() {
         return 2.0;
