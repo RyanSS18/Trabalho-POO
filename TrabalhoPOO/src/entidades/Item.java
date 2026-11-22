@@ -1,17 +1,30 @@
 package entidades;
 
+/**
+ * Classe ABSTRATA que representa qualquer item do acervo da biblioteca.
+ * Guarda os atributos comuns (id, título e ano) e obriga as subclasses
+ * (Livro e Dvd) a implementarem o cálculo da multa por dia de atraso.
+ * Não pode ser instanciada diretamente: só suas subclasses podem.
+ */
+
+
 public abstract class Item {
-    private Integer id;
+    private Integer id;    
     private String titulo;
     private Integer ano;
 
-    public abstract Double calcularMultaPorDia ();
 
+
+  /**Cria um item com os dados comuns a todos os tipos.
+     Chamado pelas subclasses através de super(...).  */
     public Item(Integer id, String titulo, Integer ano) {
         this.id = id;
         this.titulo = titulo;
         this.ano = ano;
     }
+    
+    //cada subclasse define o valor da sua multa por dia
+    public abstract Double calcularMultaPorDia ();
 
     public Integer getId() {
         return id;
