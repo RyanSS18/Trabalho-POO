@@ -1,5 +1,10 @@
 package entidades;
 
+/**
+ * Representa o autor de um livro.
+ * Esta classe é usada em COMPOSIÇÃO pela classe Livro: o Autor é criado
+ * dentro do Livro e não existe de forma independente dele.
+ */
 public class Autor {
 
     private String nome;
