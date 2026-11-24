@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 
 public class RepositorioEmMemoria implements Repositorio {
-    private List<Item> itens;
+   
 
     // Estrutura de dados que armazena os itens cadastrados
     private List<Item> itens;
@@ -29,7 +29,7 @@ public class RepositorioEmMemoria implements Repositorio {
     public void salvar(Item item) {
         itens.add(item);
     }
-   //Remove o item no final da lista
+   //Remove o item escolhido no final da lista
     @Override
     public void remover(Item item) {
         itens.remove(item);
